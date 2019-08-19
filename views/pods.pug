@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  table.striped.responsive-table
+    thead
+      each head in keys
+        th= head
+      th ACTIONS
+    tbody
+      each row in pods
+        tr
+          each k in keys
+            td= row[k]
+          td
+            a.waves-effect.waves-light.btn(href=`/logs/`+ namespace +`/` + row["NAME"]) get logs
