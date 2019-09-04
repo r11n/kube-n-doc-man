@@ -1,0 +1,24 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/mat-icons.css')
+    link(rel='stylesheet', href='/materialize/css/materialize.min.css')
+    script(src='/jquery/jquery.min.js')
+    script(src='/materialize/js/materialize.min.js')
+    link(rel="stylesheet", href="/xterm/xterm.css")
+    script(src="/xterm/xterm.js")
+    script(src="/xterm/addons/attach/attach.js")
+    script(src="/xterm/addons/fit/fit.js")
+  body
+    nav
+      .nav-wrapper
+        a.brand-logo(href='/')
+          i.mat-icons.medium child_care
+        ul#nav-mobile.right.hide-on-med-and-down
+          li
+            a(href='/namespaces') Namespaces
+          li
+            a(href='/pods') Pods
+    block content

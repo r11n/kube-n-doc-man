@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var kube = require('../lib/kube_cmd');
 var hashify = require('../lib/hashify');
-var ansi2html = require('ansi2html')
+var ansi2html = require('ansi2html');
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
@@ -33,6 +33,10 @@ router.get('/logs/:namespace/:pod_id', function(req, res, next) {
       res.render('logs', { output: ansi2html(error)});
     }
   )
+});
+
+router.get('/terminal', function(req, res, next) {
+  res.render('terminal')
 });
 
 
