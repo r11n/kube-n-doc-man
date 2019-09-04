@@ -7,6 +7,9 @@ A simple node app to work to connect to kubernetes and docker using the `child_p
 * see logs in a single container pods that are killed or completed(`/logs/:pod-id`)
 ### Docker:
 * TODO
+### Terminal:
+* based on the `OS` environment `bash` or `powershell` will be available on `/terminal` route.
+* tested with `bash` shell
 ## Contribution instructions:
 * use pull request based contribution.
 * branch out of `master` and make a pull request.
