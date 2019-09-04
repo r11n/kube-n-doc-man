@@ -107,7 +107,6 @@ function onError(error) {
  */
 
 function onListening() {
-  debug(app.routes);
   var addr = server.address();
   var bind = typeof addr === 'string'
     ? 'pipe ' + addr
